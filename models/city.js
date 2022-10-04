@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      city.hasMany(models.neigbourhood);
+      city.hasMany(models.neighbourhood);
     }
   }
   city.init(
