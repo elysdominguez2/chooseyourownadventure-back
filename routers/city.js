@@ -3,6 +3,8 @@ const { Router } = express;
 const router = new Router();
 const City = require("../models").city;
 
+//GET all the cities
+
 router.get("/", async (request, response, next) => {
   try {
     const cities = await City.findAll({
@@ -12,6 +14,18 @@ router.get("/", async (request, response, next) => {
     response.send(cities);
   } catch (e) {
     console.log(e.message);
+    next(e);
+  }
+});
+
+//Get the city by Id
+
+router.get("/:id", async (request, response, next) => {
+  try {
+    const cityId = request.params.id;
+    const theCity = await City.findByPk(cityId);
+    response.send(theCity);
+  } catch (e) {
     next(e);
   }
 });
