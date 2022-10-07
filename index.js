@@ -5,6 +5,7 @@ const corsMiddleWare = require("cors");
 //routers
 const authRouter = require("./routers/auth");
 const cityRouter = require("./routers/city");
+const neighbourhoodRouter = require("./routers/neighbourhood");
 
 //constants
 const { PORT } = require("./config/constants");
@@ -23,6 +24,7 @@ app.use(express.json());
 //routes
 app.use("/auth", authRouter);
 app.use("/city", cityRouter);
+app.use("/neighbourhood", neighbourhoodRouter);
 
 //start listening
 app.listen(PORT, () => {
