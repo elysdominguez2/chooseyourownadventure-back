@@ -3,7 +3,7 @@ const { Router } = express;
 const router = new Router();
 const Neighbourhood = require("../models").neighbourhood;
 
-//Get the city by Id
+//Get the neighbourhood by Id
 
 router.get("/:id", async (request, response, next) => {
   try {
