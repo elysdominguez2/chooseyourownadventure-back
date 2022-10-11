@@ -2,6 +2,7 @@ const express = require("express");
 const { Router } = express;
 const router = new Router();
 const City = require("../models").city;
+const Neighbourhood = require("../models").neighbourhood;
 
 //GET all the cities
 
@@ -23,7 +24,9 @@ router.get("/", async (request, response, next) => {
 router.get("/:id", async (request, response, next) => {
   try {
     const cityId = request.params.id;
-    const theCity = await City.findByPk(cityId);
+    const theCity = await City.findByPk(cityId, {
+      include: [Neighbourhood],
+    });
     response.send(theCity);
   } catch (e) {
     next(e);
