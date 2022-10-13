@@ -3,7 +3,7 @@ const { Router } = express;
 const router = new Router();
 const City = require("../models").city;
 const Neighbourhood = require("../models").neighbourhood;
-
+const PointsOfInterest = require("../models").pointsOfInterest;
 //GET all the cities
 
 router.get("/", async (request, response, next) => {
@@ -25,7 +25,7 @@ router.get("/:id", async (request, response, next) => {
   try {
     const cityId = request.params.id;
     const theCity = await City.findByPk(cityId, {
-      include: [Neighbourhood],
+      include: [{ model: Neighbourhood, include: { model: PointsOfInterest } }],
     });
     response.send(theCity);
   } catch (e) {
