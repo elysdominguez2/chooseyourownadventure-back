@@ -4,6 +4,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("pointsOfInterests", [
+      //From JORDAAN
       {
         name: "Winkel 43 - The famous Apple Pie",
         lat: 52.37909,
@@ -13,6 +14,8 @@ module.exports = {
         imageUrl:
           "https://cdn.pixabay.com/photo/2016/04/14/09/29/cake-1328547_1280.jpg",
         neighbourhoodId: 1,
+        question:
+          "Do you want to take your friends to try the best apple pie in the world?",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -25,6 +28,8 @@ module.exports = {
         imageUrl:
           "https://cdn.pixabay.com/photo/2017/08/19/16/09/canal-2659062_1280.jpg",
         neighbourhoodId: 1,
+        question:
+          "You may want to experience what it is like to live in a boat house",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -37,6 +42,8 @@ module.exports = {
         imageUrl:
           "https://cdn.pixabay.com/photo/2014/05/18/06/51/anne-frank-346861_1280.jpg",
         neighbourhoodId: 1,
+        question:
+          "Can you imagine what it is like to live for two years in a small house behind walls hidden from everyone? Here you can",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -49,9 +56,11 @@ module.exports = {
         imageUrl:
           "https://cdn.pixabay.com/photo/2019/09/14/13/49/amsterdam-4476104_1280.jpg",
         neighbourhoodId: 1,
+        question: "Is architecture for you? Look at this huge church from 1600",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      //From RED LIGHTS
       {
         name: "Amstelkring Catholic Church",
         lat: 52.37263,
@@ -61,6 +70,8 @@ module.exports = {
         imageUrl:
           "https://cdn.pixabay.com/photo/2017/01/14/13/05/cross-1979473_1280.jpg",
         neighbourhoodId: 2,
+        question:
+          "Are you curious? There is a hidden church near here, can you find it?",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -73,6 +84,7 @@ module.exports = {
         imageUrl:
           "https://cdn.pixabay.com/photo/2016/01/03/13/35/netherlands-1119451_1280.jpg",
         neighbourhoodId: 2,
+        question: "Where were the Coffeeshops born?",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -85,6 +97,7 @@ module.exports = {
         imageUrl:
           "https://cdn.pixabay.com/photo/2016/11/30/12/29/bicycle-1872682_1280.jpg",
         neighbourhoodId: 2,
+        question: "How many types of condoms can you count here?",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -97,6 +110,127 @@ module.exports = {
         imageUrl:
           "https://cdn.pixabay.com/photo/2010/12/13/10/13/amsterdam-2551_1280.jpg",
         neighbourhoodId: 2,
+        question:
+          "What do you think when you think of Amsterdam? Perhaps here is your answer",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      //From EL RAVAL
+      {
+        name: "The monastery of San Pablo del Campo",
+        lat: 41.37702,
+        lon: 2.16947,
+        description:
+          "The monastery of San Pablo del Campo is an old Benedictine monastery located in the El Raval neighborhood of the Spanish city of Barcelona, where it is one of the best preserved Romanesque buildings.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1617733743703-6d13c8078325?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        neighbourhoodId: 3,
+        question: "Here you can transport yourself to another era",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Palau Güell",
+        lat: 41.37958,
+        lon: 2.17428,
+        description:
+          "Palau Güell was Antoni Gaudí's first commission from Eusebi Güell in 1885. It is a city mansion full of every conceivable kind of luxury and located in one of the most popular, and most run-down, districts of Barcelona at the time: the Raval district.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1456132311779-ca4ff6130510?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        neighbourhoodId: 3,
+        question: "Do you want to follow in the footsteps of Gaudi?",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Gran Teatro del Liceo",
+        lat: 41.381,
+        lon: 2.17322,
+        description:
+          "The Gran Teatro del Liceo de Barcelona, known as El Liceo, is the oldest and most prestigious active theater in Barcelona, especially as an opera house, among which it is considered one of the most important in the world.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1615414047026-802692414b79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
+        neighbourhoodId: 3,
+        question: "This is not a simple theater",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Mercado La Boquería",
+        lat: 41.38234,
+        lon: 2.1717,
+        description:
+          "La Boquería is a famous market that provides a wide variety of fresh fruits, vegetables, nuts and seeds, sweets, as well as meat, fish, cheese and dairy products. However, even if you don't want to buy anything at the market, it's worth a visit to soak up the atmosphere and the burst of color from the fresh fruit on the stalls.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        neighbourhoodId: 3,
+        question: "Are you hungry? This is a must stop",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      //From El POBLE-SEC
+      {
+        name: "The magic fountain",
+        lat: 41.36799,
+        lon: 2.16881,
+        description:
+          "The Magic Fountain has been, and still is, an important part of some of the biggest events in the city's recent history, including the 1992 Olympic Games and the annual La Mercè pyrotechnic musical show, which combines the fountain's choreographies with a fireworks display. This attracts large crowds of local residents and people from all over the world to Avinguda de la Reina Maria Cristina.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1607873894099-eee7896bab03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80",
+        neighbourhoodId: 4,
+        question: "Do you have coins in your pockets? let's make wishes",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Museu Nacional d'Art de Catalunya",
+        lat: 41.37058,
+        lon: 2.157549,
+        description:
+          "This museum is also known by its acronym MNAC. It stands out for its collection of Romanesque art, considered one of the most complete in the world. It contains hundreds of pieces from medieval times to the 19th century.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1567544668986-dbf98eb544fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        neighbourhoodId: 4,
+        question: "Are you lovers of romantic art? find out here",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Miró Museum",
+        lat: 41.36914,
+        lon: 2.16,
+        description:
+          "The Joan Miró Foundation is a cultural institution that guards some of the most representative works of the Catalan painter Joan Miró. A place to experience his art  and other twentieth and twenty-first century artists, a space for participation and dialogue. It contains more than 104,000 pieces including paintings, sculptures and tapestries.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80",
+        neighbourhoodId: 4,
+        question: "Perhaps you prefer modern art",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Montjuïc Castle",
+        lat: 41.36914,
+        lon: 2.16506,
+        description:
+          "Situated at the highest point of the Montjuic Mountain, you will be able to enjoy impressive views of Barcelona, both of the coastline and other points in the city, which makes it one of the most spectacular viewpoints in Barcelona. Montjuic Castle dates from the s. XVII and was built on a strategic high point near the sea. The castle is an old military fortress. ",
+        imageUrl:
+          "https://images.unsplash.com/photo-1565172700745-f8bcdffb82dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        neighbourhoodId: 4,
+        question: "Would you like to have incredible views of the entire city?",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Botanical Garden",
+        lat: 41.36784,
+        lon: 2.15833,
+        description:
+          "Jardins de Mossèn Costa i Llobera is a cactus garden that gives off a very special energy; the paths zigzag up Montjuïc and there are beautiful views of the sea below. You can also walk through the rose gardens of Jardins del Teatre Grec and take a seat on the large stairs of the Teatre Grec, an open-air theater that puts on plays during the summer. Another enjoyable walk is though Laribal Gardens, where it feels like you’re in Italy with the trees and fountains.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80",
+        neighbourhoodId: 4,
+        question: "Is nature your thing? Get lost in these beautiful gardens",
         createdAt: new Date(),
         updatedAt: new Date(),
       },

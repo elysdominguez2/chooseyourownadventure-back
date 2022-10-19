@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       lon: { type: DataTypes.FLOAT, allowNull: false },
       description: { type: DataTypes.TEXT, allowNull: false },
       imageUrl: { type: DataTypes.STRING, allowNull: false },
+      question: { type: DataTypes.TEXT, allowNull: false },
     },
     {
       sequelize,
