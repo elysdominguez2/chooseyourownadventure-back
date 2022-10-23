@@ -1,93 +1,26 @@
-# Server template
+# Choose your own adventure App
 
-This is a simple server template to for my students to start projects quickly.
+![Image text](https://res.cloudinary.com/dfwupsfxv/image/upload/v1666549267/cyoa_q9tovx.png)
 
-## Table of contents:
+## Welcome!
 
-- **[Setup](#setup-how-to-use-this-template)**
-- **[Endpoints](#endpoints)**
-- **[Sample requests with httpie](#sample-requests-with-httpie)**
+This is a tourism app where you are the protagonist and you own your destination during the itinerary.
 
-## SETUP How to use this template
+I based my app on a book I read as a child. In which you have a bunch of different endings. So now the same with this app. The itinerary is not the same for you as it is for me, because we can choose a different route.
 
-1. **Create a new project based on this template using the `Use this template` button**
+## Workflow
 
-![HOW_TO_USE](https://user-images.githubusercontent.com/20372832/77003323-70966180-695d-11ea-8abe-b362d57135f3.gif)
+I created two repositories [Backend](https://github.com/elysdominguez2/chooseyourownadventure-back) and [Frontend](https://github.com/elysdominguez2/chooseyourownadventure-front)
+I also deployed the Frontend in [Netlify](https://choose-your-own-adventure-app.netlify.app/) soon Backend deploy.
 
-2. **Clone the app**
+## Wireframe:
 
-```
-git clone git@github.com:YOUR_GITHUB_NAME/YOUR_PROJECT_NAME.git
-```
+In the begining I designed the user story and the [Mockflow](https://wireframepro.mockflow.com/view/chooseyourownadventure) to have a reference.
 
-3. **cd into your project**
+### Frontend tools
 
-```
-cd YOUR_PROJECT_NAME
-```
+I used [React](https://reactjs.org/) framework with [Redux](https://es.redux.js.org/) to control the global state. I did the CSS with [Tailwind](https://tailwindcss.com/) and vainilla CSS for the animation. [React-Icons](https://react-icons.github.io/react-icons/) for the icons. I consulted the api [Leaflet](https://react-leaflet.js.org/) for the maps.
 
-4. **install dependencies**
+### Backend tools
 
-```
-npm install
-```
-
-5. **Configure your database in `config/config.json`**
-
-Default config is setup for usage with an ElephantSQL database instance, you need to provide the DB Url on the "url" key of the config.json file, key development.
-
-```json
-// config/config.json
-{
-  "development": {
-    "url": "YOUR_ELEPHANTSQL_URL_HERE",
-    "dialect": "postgres"
-  },
-}
-```
-
-6. **Create database, run migrations & seed data**
-
-`package.json` contains a script for this
-
-```bash
-npm run initdev
-```
-
-Or run the commands seperately
-
-```bash
-npx sequelize-cli db:migrate
-npx sequelize-cli db:seed:all
-```
-
-7. **start server with `nodemon` (recommended for development)**
-
-```
-npm run dev
-```
-
-8. **or start normally**
-
-```
-npm start
-```
-
-## Endpoints
-
-| Method | Path                       | Purpose                             | required parameters   | auth |
-| ------ | -------------------------- | ----------------------------------- | --------------------- | ---- |
-| POST   | '/signup'                  | Create a new user and get a token   | email, name, password | no   |
-| POST   | '/login'                   | Get a token with email & password   | email, password       | no   |
-| GET    | '/me'                      | Get information of this user        | none                  | yes  |
-
-
-## Sample requests with httpie
-
-To demo making request to this server, bash commands are included that make requests using `httpie`
-
-| Method | Path                       | Command                           
-| ------ | -------------------------- | -----------------------------------
-| POST   | '/signup'                  | http :4000/sign   
-| POST   | '/login'                   | http :4000/login  
-| GET    | '/me'                      | http :4000/me      
+I used [Express](https://expressjs.com/es/) as framework. Also I used [Sequelize](https://sequelize.org/) and [PostgreSQL](https://www.postgresql.org/) for the models.
